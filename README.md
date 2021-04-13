@@ -1,2 +1,2 @@
 # Deep Learning
-Deep Learning with tensorflow
+- Deep Learning with tensorflow
