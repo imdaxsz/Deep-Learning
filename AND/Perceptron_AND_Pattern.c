@@ -10,10 +10,10 @@ void main()
 	// input: X
 	double X[TRAIN_SAMPLES][2] =
 	{
-		0, 0, // 클래스 0
-		0, 1, // 클래스 0
-		1, 0, // 클래스 0
-		1, 1 // 클래스 1
+		0, 0, // class 0
+		0, 1, // class 0
+		1, 0, // class 0
+		1, 1 // class 1
 	};
 	// target Y
 	double Y[TRAIN_SAMPLES] =
@@ -22,7 +22,7 @@ void main()
 	};
 
 	// weight
-	double W[3]; // 구해야 할 w는 3개
+	double W[3];
 	
 	//-------------------------------------------
 	// 1) Training
@@ -30,11 +30,11 @@ void main()
 	
 	// initialize W
 	for (int i = 0; i < 3; i++)
-		W[i] = ((double)rand() / RAND_MAX)*0.5 - 0.25; // 적당히 임의의 값 설정
+		W[i] = ((double)rand() / RAND_MAX)*0.5 - 0.25;
 				
 	unsigned int epoch = 0;
-	unsigned int MAX_EPOCH = 500; // 500회 반복
-	double Etha = 0.05; // 학습률
+	unsigned int MAX_EPOCH = 500;
+	double Etha = 0.05; // learning rate
 
 	double yhat;
 	double x1, x2;
